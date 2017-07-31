@@ -1,0 +1,37 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+
+/* 优惠方式 */
+.m-schrst2 {
+    padding-left:0;
+    color: #333;
+    width: 100%;
+    .itm 
+    {
+      padding-right: 25/@s;
+      border-top: 1px solid #d0d0d0;
+      font-size: 30/@s;
+      color: #999;
+      overflow: hidden;
+      padding:10/@s 0;
+      a {
+        .flexbox;
+        .box-align(center);
+        line-height: 80/@s;
+        color: #777;
+        &:active {
+          color: #e41b46;
+        }
+      }
+      .m_itmspan{
+        float: left;
+        color: #333;
+        line-height: 3rem;
+      }
+    }
+    li{
+      list-style: none;
+    }
+}

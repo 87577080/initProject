@@ -1,0 +1,101 @@
+<div class="box" id="privilege">
+    <div class="m-deliver">
+        <div class="hd">
+            <h2 class="tt1"><span class="m_fl">优惠方式</span></h2>
+        </div>
+
+        <!-- 优惠方式 start -->   
+        <div class="m-schrst2">           
+            <ul class="lst">
+                <li class="itm">         
+                    <span class="m_itmspan">优惠政策</span>
+                    <a class="more m_fr price1" href="javascript:;" @click.stop="couponPolicyToggleFN()">购物满200立减100元</a>  
+                </li>      
+                <li class="itm">
+                    <span class="m_itmspan" >优惠券  <span class="m_c777">(0张可用)</span></span>
+                    <a class="more m_fr price2" href="javascript:;" @click.stop="couponToggleFN()">选择使用</a>
+                </li>
+                <li class="itm">
+                    <span class="m_itmspan">积  分 <span class="m_c777">(可用积分300，抵扣3.00元)</span></span>
+                    <a class="u-check m_fr mt10" href="javascript:;"></a>
+                </li>
+            </ul>
+        </div>
+        <!-- 优惠方式 end -->          
+            
+    </div>   
+     
+    <!-- 遮罩层 start -->       
+    <div class="m-mask" v-show="maskToggle" v-on:click="maskToggleFN"></div>  
+    <!-- 遮罩层 end -->       
+  
+    <!-- 优惠券政策弹层 start -->        
+    <div class="m-layer m-layer-policy m-policy" v-show="couponPolicyToggle">  
+        <div class="box">
+            <div class="m-deliver">  
+                <!-- 优惠卷张数 start -->
+                <div class="m-schrst2">         
+                    <ul class="lst">
+                        <li class="itm">
+                            <span class="m_itmspan"><span class="m_ce4">购物满200元立减10元</span></span>
+                            <a class="u-check m_fr mt10 z-sel" href="javascript:;"></a>
+                        </li>
+                        <li class="itm">
+                            <span class="m_itmspan"><span class="m_c777">购物满5000元立减900元</span></span>
+                            <a class="u-check m_fr mt10" href="javascript:;"></a> 
+                        </li>
+                    </ul>
+                </div>
+                <!-- 优惠券张数 end -->
+            </div>
+        </div>
+    </div>
+    <!-- 优惠券政策弹层 end -->
+
+    <!-- 优惠券张数弹层 start -->
+    <div class="m-layer m-layer-yhj m-yhj" v-show="couponToggle">
+        <div class="box">
+            <div class="m-deliver">
+                <!-- 优惠卷张数 start -->
+                <div class="m-schrst2">   
+                    <ul class="lst">
+                        <li class="itm">
+                            <span class="m_itmspan"><span class="m_ce4">优惠券50元</span></span>
+                            <a class="u-check m_fr mt10 z-sel" href="javascript:;"></a>
+                        </li>
+                        <li class="itm">
+                            <span class="m_itmspan"><span class="m_c777">M站专享礼包100元</span></span>
+                            <a class="u-check m_fr mt10" href="javascript:;"></a>
+                        </li>
+                    </ul>
+                </div>   
+                <!-- 优惠券张数 end -->
+            </div>
+        </div>
+        <div class="ft">   
+            <a class="u-btn u-btn-c2 u-btn-lg" href="javascript:;">添加优惠券</a>
+        </div>
+    </div>     
+    <!-- 优惠券张数弹层 end -->
+
+
+    <!-- 验证码弹层 begin -->
+    <div class="m-layer m-layer-code z-hide">  
+        <div class="hd">
+            <h2 class="tt">添加优惠券</h2>
+        </div>
+        <div class="bd">
+            <div class="u-ipt u-ipt-code">
+                <input class="ipt m_new_ipt" type="telephone" value="请输入优惠券号码">
+            </div>
+        </div>
+        <div class="ft">
+            <div class="ops">
+                <a href="javascript:;" class="u-btn" data-hide-layer=".m-layer">取消</a>
+                <a href="javascript:;" class="u-btn">确定</a>
+            </div>
+        </div>
+    </div>
+    <!-- 验证码弹层 end -->
+
+</div>

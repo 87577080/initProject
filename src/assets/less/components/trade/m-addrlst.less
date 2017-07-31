@@ -1,0 +1,57 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+/* 收货地址列表 */
+.m-addrlst {
+  position: relative;
+  width: 100%;
+  color: #333;
+  font-size: 28/@s;
+  line-height: 34/@s;
+
+  .itm {
+    .flexbox;
+
+    border-top: 1px solid #d0d0d0;
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+
+  .mn, .sd {
+    .flexbox;
+  }
+
+  .mn {
+    .box-flex;
+    .box-orient(vertical);
+
+    padding: 25/@s;
+    padding-right: 0;
+  }
+
+  .sd {
+    .box-pack(center);
+    .box-align(center);
+
+    width: 98/@s;
+  }
+
+  .row {
+    .flexbox;
+    
+    padding-bottom: 12/@s;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  .name {
+    .flexbox;
+
+    .box-flex;
+  }
+}

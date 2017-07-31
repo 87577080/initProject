@@ -1,0 +1,50 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+/* 实名购票 */
+.m-schrst1 {
+    padding-left:0;
+    color: #333;
+    width: 100%;
+    .itm 
+    {
+
+      padding-right: 25/@s;
+      border-top: 1px solid #d0d0d0;
+      font-size: 32/@s;
+      color: #999;
+      overflow: hidden;
+      padding:0.8rem 0;
+      a {
+        width: 150/@s;
+        .flexbox;
+        .box-align(center);
+        float: left;
+        height: 80/@s;
+        color: #333;
+        &:active {
+          color: #e41b46;
+        }
+      }
+      .name{
+        padding-left: 1rem;
+        font-size: 28/@s;
+      }
+    }
+
+    .m_ajh{
+      float: right; 
+      margin-top: 20/@s; 
+      color: #333;
+    }
+    .m_itmpic{
+      width: 44/@s;
+      height: 44/@s;
+      background:url('@{static}/images/m_itmpic.png') no-repeat;
+      background-size: contain;
+      float: left;
+      margin-top: 0.8rem;
+    }
+}
+

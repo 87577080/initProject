@@ -1,0 +1,66 @@
+@import "../../base/fn";
+
+.dmui-cells {
+    margin-top: @dmuiCellsMarginTop;
+    background-color: @dmuiCellBg;
+    line-height: @dmuiCellLineHeight;
+    font-size: @dmuiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+
+    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+
+    // onepx
+    position: relative;
+    &:before {
+        .setTopLine(@dmuiCellBorderColor);
+    }
+    &:after {
+        .setBottomLine(@dmuiCellBorderColor);
+    }
+}
+
+.dmui-cells__title {
+    margin-top: .77em; // 15px - 行高
+    margin-bottom: .3em; // 8px - 行高
+    padding-left: @dmuiCellGapH;
+    padding-right: @dmuiCellGapH;
+    color: @dmuiTextColorGray;
+    font-size: @dmuiCellTipsFontSize;
+
+    & + .dmui-cells {
+        margin-top: 0;
+    }
+}
+
+.dmui-cells__tips {
+    margin-top: .3em; // 8px - 行高
+    color: @dmuiTextColorGray;
+    padding-left: @dmuiCellGapH;
+    padding-right: @dmuiCellGapH;
+    font-size: @dmuiCellTipsFontSize;
+}
+
+.dmui-cell {
+    padding: @dmuiCellGapV @dmuiCellGapH;
+    position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+    display: flex;
+    align-items: center;
+    &:before {
+        .setTopLine(@dmuiCellBorderColor);
+        left: @dmuiCellGapH;
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+.dmui-cell_primary{
+    align-items: flex-start;
+}
+.dmui-cell__bd{
+    flex: 1;
+}
+.dmui-cell__ft {
+    text-align: right;
+    color: @dmuiTextColorGray;
+}

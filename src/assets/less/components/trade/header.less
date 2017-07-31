@@ -1,0 +1,64 @@
+/* banner */
+
+@import '../../common/_core.less';
+
+
+.m-nav {
+      position: relative;
+      height: 3rem;
+      line-height: 3rem;
+      color: #fff;
+      background-color: #e41b46;
+      .tt {
+          overflow: hidden;
+          word-wrap: normal;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: 55%;
+          height: 100%;
+          margin: 0 auto;
+          font-size: 0;
+          text-align: center;
+        }
+       .u-btn {
+        float: left;
+        height: 100%;
+        line-height: 49.95rem;
+        font-size: 1.4rem;
+        text-align: center;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: transparent;
+      }
+      .u-btn-back {
+        width: 24/@s;
+        height: 41/@s;
+        background:url('@{static}/images/u-btn-back.png') no-repeat center center;
+        background-size: contain;
+        margin: 20/@s;
+      }
+      .u-btn-home1 {
+	    width: 4.1rem;
+	    background:url('@{static}/images/u-btn-home1.png') no-repeat;
+	    background-size: 1.65rem 1.65rem;
+	}
+      .lbox, .rbox {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      height: 100%;
+      overflow: hidden;
+    }
+    .rbox {
+    	right: 0;
+	}
+    .txt {
+    	font-size: 28/@s;
+    	font-weight: normal;	
+	}
+	.city {
+    	display: inline-block;
+    	vertical-align: middle;
+	}
+}

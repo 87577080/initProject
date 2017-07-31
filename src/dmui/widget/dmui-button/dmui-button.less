@@ -1,0 +1,61 @@
+@import "../../base/fn";
+@import "dmui-btn_global";
+@import "dmui-btn_default";
+@import "dmui-btn_primary";
+@import "dmui-btn_warn";
+@import "dmui-btn_disabled";
+@import "dmui-btn_plain";
+
+button, input {
+    &.dmui-btn {
+        width: 100%;
+        border-width: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        &:focus {
+            outline: 0;
+        }
+    }
+    &.dmui-btn_inline,&.dmui-btn_mini {
+        width: auto;
+    }
+    &.dmui-btn_plain-primary,&.dmui-btn_plain-default{
+        border-width: 1px;
+        background-color: transparent;
+    }
+}
+
+.dmui-btn_mini {
+    display: inline-block;
+    padding: 0 1.32em;
+    line-height: @dmuiBtnMiniHeight;
+    font-size: @dmuiBtnMiniFontSize;
+}
+
+
+/*gap between btn*/
+.dmui-btn + .dmui-btn {
+    margin-top: @dmuiBtnDefaultGap;
+}
+
+.dmui-btn.dmui-btn_inline + .dmui-btn.dmui-btn_inline {
+    margin-top: auto;
+    margin-left: @dmuiBtnDefaultGap;
+}
+
+.dmui-btn-area {
+    margin: @dmuiCellsMarginTop @dmuiBtnDefaultGap .3em; 
+}
+.dmui-btn-area_inline {
+    display: flex;
+    .dmui-btn {
+        margin-top: auto;
+        margin-right: @dmuiBtnDefaultGap;
+        width: 100%;
+        flex: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+

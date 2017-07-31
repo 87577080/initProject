@@ -1,0 +1,89 @@
+@import "../../../base/fn";
+
+.dmui-form-preview{
+    position: relative;
+    background-color: #FFFFFF;
+    &:before{
+        .setTopLine(@dmuiCellBorderColor);
+    }
+    &:after{
+        .setBottomLine(@dmuiCellBorderColor);
+    }
+}
+.dmui-form-preview__hd{
+    position: relative;
+    padding: @dmuiCellGapV @dmuiCellGapH;
+    text-align: right;
+    line-height: 2.5em;
+    &:after{
+        .setBottomLine(@dmuiCellBorderColor);
+        left: @dmuiCellGapH;
+    }
+    .dmui-form-preview__value{
+        font-style: normal;
+        font-size: 1.6em;
+    }
+}
+.dmui-form-preview__bd{
+    padding: @dmuiCellGapV @dmuiCellGapH;
+    font-size: .9em;
+    text-align: right;
+    color: @dmuiTextColorGray;
+    line-height: 2;
+}
+.dmui-form-preview__ft{
+    position: relative;
+    line-height: 50px;
+    display: flex;
+    &:after {
+        .setTopLine(@dmuiDialogLineColor);
+    }
+}
+.dmui-form-preview__item{
+    overflow: hidden;
+}
+.dmui-form-preview__label{
+    float: left;
+    margin-right: 1em;
+    min-width: 4em;
+    color: @dmuiTextColorGray;
+    text-align: justify;
+    text-align-last: justify;
+}
+.dmui-form-preview__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+}
+.dmui-form-preview__btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: @dmuiDialogLinkColor;
+    text-align: center;
+    .setTapColor();
+    button&{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        font-size: inherit;
+    }
+    &:active {
+        background-color: @dmuiDialogLinkActiveBc;
+    }
+    &:after {
+        .setLeftLine(@dmuiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.dmui-form-preview__btn_default {
+    color: @dmuiTextColorGray;
+}
+.dmui-form-preview__btn_primary {
+    color: #0BB20C;
+}

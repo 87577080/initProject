@@ -1,0 +1,37 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+
+/* 商品原则 */
+.m-schrst3 {
+    color: #333;
+    width: 100%;
+    padding: 1rem 0;
+    .m-schrst3_span{
+      line-height:3rem;
+    }
+    li{
+      list-style: none;
+    }
+    .itm 
+    {
+      padding-right: 15/@s;
+      font-size:30/@s;
+      color: #333;
+      overflow: hidden;
+      a {
+        .flexbox;
+        .box-align(center);
+        &:active {
+          color: #e41b46;
+        }
+
+      }
+      .m_itmspan{
+        float: left;
+        color: #777;
+        line-height: 3rem;
+      }
+    }
+}

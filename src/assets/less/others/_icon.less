@@ -1,0 +1,76 @@
+/* ico */
+
+.ico {
+  .f-ib;
+
+  font-style: normal;
+  font-family: 'iconfont';
+
+  &.z-hide {
+    display: none;
+  }
+
+  &-danger, &-warn, &-succ {
+    background-image: url('@{static}/images/i.png');
+    background-repeat: no-repeat;
+    background-position: 9999px 9999px;
+  }
+
+  /* danger */
+  &-danger {
+    width: 12px;
+    height: 12px;
+    background-position: -188px -475px;
+  }
+
+  /* warn */
+  &-warn {
+    width: 16px;
+    height: 16px;
+    background-position: -184px -622px;
+  }
+
+  /* succ */
+  &-succ {
+    width: 12px;
+    height: 12px;
+    background-position: -188px -445px;
+  }
+
+  &-express, &-pickup, &-idticket, &-codeticket {
+    background-image: url('@{static}/images/sta_p_1.png');
+    background-repeat: no-repeat;
+    background-position: 9999px 9999px;
+  }
+
+
+  /* 身份证电子票 */
+  &-idticket {
+    width: 79px;
+    height: 78px;
+    background-position: 0 -312px;
+  }
+
+
+  /* 二维码电子票 */
+  &-codeticket {
+    width: 79px;
+    height: 78px;
+    background-position: 0 0px;
+  }
+
+
+  /* 快递 */
+  &-express {
+    width: 79px;
+    height: 78px;
+    background-position: 0 -78px;
+  }
+
+  /* 自取 */
+  &-pickup {
+    width: 79px;
+    height: 78px;
+    background-position: 0 -156px;
+  }
+}

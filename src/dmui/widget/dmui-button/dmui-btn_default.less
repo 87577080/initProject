@@ -1,0 +1,13 @@
+@import "../../base/fn";
+
+.dmui-btn_default {
+    color: @dmuiBtnDefaultFontColor;
+    background-color: @dmuiBtnDefaultBg;
+    &:not(.dmui-btn_disabled):visited {
+        color: @dmuiBtnDefaultFontColor;
+    }
+    &:not(.dmui-btn_disabled):active {
+        color: @dmuiBtnDefaultActiveFontColor;
+        background-color: @dmuiBtnDefaultActiveBg;
+    }
+}

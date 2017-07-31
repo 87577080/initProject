@@ -1,0 +1,30 @@
+@import "../../../base/fn";
+
+.dmui-cells_checkbox {
+    .dmui-cell__hd {
+        padding-right: @dmuiCellInnerGapH;
+    }
+    .dmui-icon-checked {
+        &:before {
+            content: '\EA01';
+            color: #C9C9C9;
+            font-size: 23px;
+            display: block;
+        }
+    }
+}
+
+// method2 accessbility
+.dmui-check {
+    // checkbox
+    .dmui-cells_checkbox & {
+        &:checked {
+            & + .dmui-icon-checked {
+                &:before {
+                    content: '\EA06';
+                    color: #09BB07;
+                }
+            }
+        }
+    }
+}

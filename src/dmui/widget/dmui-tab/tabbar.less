@@ -1,0 +1,57 @@
+@import "../../base/fn";
+
+.dmui-tabbar {
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    bottom: 0;
+    width: 100%;
+    background-color: #f7f7fa;
+
+    &:before {
+        .setTopLine(#C0BFC4);
+    }
+}
+
+.dmui-tabbar__item {
+    display: block;
+    flex: 1;
+    padding: 7px 0 0;
+    font-size: 0;
+    color: @dmuiTextColorGray;
+    text-align: center;
+    .setTapColor();
+
+    &.dmui-bar__item_on {
+        .dmui-tabbar__icon, .dmui-tabbar__icon > i, .dmui-tabbar__label {
+            color: #09BB07;
+        }
+    }
+}
+
+.dmui-tabbar__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    i&, > i {
+        font-size: 24px;
+        color: @dmuiTextColorGray;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    & + .dmui-tabbar__label {
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+}
+
+.dmui-tabbar__label {
+    text-align: center;
+    color: @dmuiTextColorGray;
+    font-size: 12px;
+}

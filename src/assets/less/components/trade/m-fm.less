@@ -1,0 +1,39 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+/* 表单 */ 
+.m-fm {
+  color: #333;
+  font-size: 28/@s;
+
+  &.z-show {
+    display: block;
+  }
+
+  &.z-hide {
+    display: none;
+  }
+
+  .row {
+    .flexbox;
+
+    padding-bottom: 20/@s;
+  }
+
+  .lab, .ipt, .u-ipt {
+    .flexbox;
+  }
+
+  .lab {
+    .box-align(center);
+
+    min-width: 80/@s;
+    height: 58/@s;
+    padding-right: 20/@s;
+  }
+
+  .ipt, .u-ipt {
+    .box-flex;
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../base/fn";
+@import "../dmui-button/dmui-button";
+
+.dmui-msg {
+    padding-top: @dmuiMsgPaddingTop;
+    text-align: center;
+}
+.dmui-msg__icon-area {
+    margin-bottom: @dmuiMsgIconGap;
+}
+.dmui-msg__text-area {
+    margin-bottom: @dmuiMsgTextGap;
+    padding:0 20px;
+}
+.dmui-msg__text-area a{
+    color:@dmuiLinkColorDefault;
+}
+.dmui-msg__title {
+    margin-bottom: @dmuiMsgTitleGap;
+    font-weight: 400;
+    font-size: 20px;
+}
+.dmui-msg__desc {
+    font-size: 14px;
+    color: @dmuiTextColorGray;
+}
+.dmui-msg__opr-area {
+    margin-bottom: @dmuiMsgOprGap;
+}
+.dmui-msg__extra-area {
+    margin-bottom: @dmuiMsgExtraAreaGap;
+    font-size: 14px;
+    color: @dmuiTextColorGray;
+    a{color: @dmuiLinkColorDefault;}
+}
+
+@media screen and (min-height: @dmuiMsgExtraAreaOfMinHeight) {
+    .dmui-msg__extra-area {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

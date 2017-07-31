@@ -1,0 +1,61 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+
+/* 订单确认 */
+.m-seatinfo1 {
+  @box_h: 90;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  .hd {
+    width:100%;
+    position: fixed;
+    z-index: 1;
+    height: @box_h/@s;
+    border-top: 1px solid #d0d0d0;
+    background-color: #fff;
+    bottom: 0;
+    .txt {
+      width: 40%;
+      text-align: center;
+      font-size: 24/@s;
+      color: #333;
+    }
+    .price {
+      font-size: 32/@s;
+      color: #e41b46;
+      margin-right: 10/@s;
+    }
+    .u-btn {
+      &-show {
+        display: block;
+        width:50%;
+        height: 25/@s;
+        background:url('@{static}/images/m-seatinfo-arrow.png') no-repeat center center;
+        background-size: 17/@s 10/@s;
+        border-right: 1px solid #d0d0d0;
+      }
+      &-buy {
+        display: block;
+        top: -1px;
+        width: 100%;
+        height: @box_h/@s;
+        font-size: 32/@s;
+        line-height: @box_h/@s;
+        text-indent: 5.5rem;
+        &:active {
+          background-color: darken(#e41b46, 5%);
+        }
+      }
+    }
+  }
+  .m_f34 {
+    font-size: 32/@s;
+  }
+  .m_ce4 {
+      color: #e41b46;
+  }
+  
+}

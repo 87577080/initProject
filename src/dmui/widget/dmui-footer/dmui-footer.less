@@ -1,0 +1,35 @@
+@import "../../base/fn";
+
+.dmui-footer {
+    color: @dmuiTextColorGray;
+    font-size: 14px;
+    text-align: center;
+    a{
+        color: @dmuiLinkColorDefault;
+    }
+}
+.dmui-footer__links{
+    font-size: 0;
+}
+.dmui-footer__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 .62em;
+    position: relative;
+    font-size: 14px;
+    &:before{
+        .setLeftLine();
+        left: -.65em;
+        top: .36em;
+        bottom: .36em;
+    }
+    &:first-child{
+        &:before{
+            display: none;
+        }
+    }
+}
+.dmui-footer__text{
+    padding: 0 .34em;
+    font-size: 12px;
+}

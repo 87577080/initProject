@@ -1,0 +1,46 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+.m-footer {
+  .f-ff1;
+  height: 100/@s;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 990;
+  .dmui-footer{
+  	bottom: 0;
+    a{
+    	color:#fff;
+    }
+    &_fixed-bottom{
+    	z-index: 999;
+    }
+  	.dmui__item {
+	   	padding:0 30/@s;
+	   	color:@color_gray_3;
+		font-size: 28/@s;
+		height: 100/@s;
+		line-height: 100/@s;
+		background: #fff;
+		flex: 1;
+	   	.cl{
+	   		color:@color_red_16;
+	   		font-size: 36/@s;
+	   	}
+ 	 }
+	  .dmui-btn{
+	  	border-radius: 0;
+	  	&_red{
+	  		height: 100/@s;
+	  		line-height: 100/@s;
+	  	}
+	  	&_red:hover{
+	  		color: #fff !important;
+	  	}
+	  }
+  }	
+  
+}

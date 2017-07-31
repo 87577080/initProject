@@ -1,0 +1,24 @@
+@import "../../base/fn";
+
+.dmui-progress {
+    display: flex;
+    align-items: center;
+}
+
+.dmui-progress__bar {
+    background-color: @dmuiProgressBg;
+    height: @dmuiProgressHeight;
+    flex: 1;
+}
+
+.dmui-progress__inner-bar {
+    width: 0;
+    height: 100%;
+    background-color: @dmuiProgressColor;
+}
+
+.dmui-progress__opr {
+    display: block;
+    margin-left: 15px;
+    font-size: 0;
+}

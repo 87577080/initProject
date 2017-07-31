@@ -1,0 +1,75 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+/* 支付信息 */  
+.m-payinfo {
+  .info {
+    .flexbox;
+  }
+  
+  .itm {
+    .flexbox;
+
+    .box-flex;
+    .box-pack(center);
+    .box-orient(vertical);
+
+    width: 100%;
+    border-left: 1px solid #d0d0d0;
+
+    &:first-of-type {
+      border-left: none;
+    }
+  }
+
+  .txt {
+    font-size: 26/@s;
+    color: #999;
+    line-height: 36/@s;
+  }
+
+  .price {
+    .flexbox;
+
+    .box-pack(end);
+    
+    position: relative;
+    font-size: 24/@s;
+    height: 100%;
+
+    &:before {
+      position: absolute;
+      top: -20/@s;
+      right: -25/@s;
+      content: '';
+      display: block;
+      width: 60/@s;
+      height: 80/@s;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      margin-left: 20/@s;
+      margin-top: 12/@s;
+      width: 12/@s;
+      height: 12/@s;
+      border-style: solid;
+      border-color: #e41b46;
+      border-width: 0 1px 1px 0;
+
+      .transform(rotate(45deg));
+    }
+  }
+
+  .rmb {
+    color: #e41b46;
+    padding-right: .5em;
+  }
+
+  .cny {
+    font-weight: normal;
+    font-size: 30/@s;
+  }
+}

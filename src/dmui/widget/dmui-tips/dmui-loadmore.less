@@ -1,0 +1,41 @@
+@import "../../base/fn";
+
+.dmui-loadmore{
+    width: 65%;
+    margin:1.5em auto;
+    line-height: 1.6em;
+    font-size:14px;
+    text-align: center;
+}
+.dmui-loadmore__tips{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dmui-loadmore_line{
+    border-top:1px solid @dmuiLineColorLight;
+    margin-top:2.4em;
+    .dmui-loadmore__tips{
+        position: relative;
+        top:-.9em;
+        padding:0 .55em;
+        background-color: #FFFFFF;
+        color:@dmuiTextColorGray;
+    }
+}
+.dmui-loadmore_dot{
+    .dmui-loadmore__tips{
+        padding:0 .16em;
+        &:before{
+            content: " ";
+            width:4px;
+            height:4px;
+            border-radius:50%;
+            background-color: @dmuiLineColorLight;
+            display: inline-block;
+            position: relative;
+            vertical-align: 0;
+            top:-.16em;
+        }
+    }
+}

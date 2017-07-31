@@ -1,0 +1,63 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+/* 支付方式 */
+.m-payway1 {
+  color: #333;
+  .bd{ padding-bottom: 0;}
+  .price {
+    padding: 25/@s 0;
+    font-size: 30/@s;
+    text-align: right;
+    .txt {
+      font-size: 24/@s;
+      color: #9a9a9a;
+    }
+  }
+  .money {
+    padding-bottom: 5/@s;
+  }
+  .rmb {
+    color: #e41b46;
+    padding-left: .5em;
+  }
+  .icon {
+    display: block;
+    width: 72/@s;
+    height: 72/@s;
+    background-size: contain;
+  }
+  .lst {
+    //.justify; 
+    .box-pack(start);
+  }
+  .itm {
+    .box-align(center);
+    .box-orient(vertical);
+    .icon, .txt, .u-check {
+      display: block;
+    }
+   dl{
+      width: 100%;
+      height: 100/@s;
+      margin: 0;
+      padding: 0;
+      overflow:hidden;
+    }
+    .icon {
+      display: block;
+      margin-bottom: 12/@s;
+    }
+   .txt {
+      display:block;
+      font-size: 28/@s;
+      line-height: 1.5;
+      padding-bottom: 12/@s;
+      padding: 1rem 0 0 1rem;
+    }
+  }
+  li{
+    list-style: none;
+  }
+}

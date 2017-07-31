@@ -1,0 +1,288 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+
+/* 票品列表弹层 */
+.m-layer-tktlst {
+  position: fixed;
+  top: 9.5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+.m-layer-tktlst.z-show {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: box;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+
+/* 优惠政策弹层 */
+.m-layer-policy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 103;
+    background: #fff;
+    .box {
+      padding: 0 1.1rem;
+    }
+    .mt10 {
+      margin-top: 20/@s;
+    }
+    .m_ce4 {
+      color: #e41b46;
+    }
+}
+
+
+/* 优惠劵张数 */
+.m-layer-yhj {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 102;
+    background: #fff;
+    .box {
+      padding: 0 1.1rem;
+    }
+    .mt10 {
+      margin-top: 20/@s;
+   }
+   .m_c777 {
+      color: #777;
+    }
+}
+
+/* 添加观众 */
+.m-layer-audience {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 103;
+    background: #fff;
+    .box {
+      padding: 0 1.1rem;
+    }
+}
+
+/* 选择观众证件 */
+.m-layer-audadd {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 105;
+    background: #fff;   
+}
+
+/* 观众信息 */
+.m-schrst4 {
+    padding-left:0;
+    color: #333;
+    width: 100%;
+    background: #fff;
+    .itm 
+    {
+     padding-right: 25/@s;
+      border-top: 1px solid #d0d0d0;
+      color: #999;
+      overflow: hidden;
+      padding:15/@s;
+      display: block;
+      a {
+        .flexbox;
+        .box-align(center);
+        color: #333;
+        &:active {
+          color: #e41b46;
+        }
+      }
+      .name{
+        padding-left: 1rem;
+      }
+    }
+
+    .m_ajh{
+      float: right;  
+      color: #333;
+    }
+    .m_itmpic{
+      width: 44/@s;
+      height: 44/@s;
+      background:url('@{static}/images/m_itmpic.png') no-repeat;
+      background-size: contain;
+      float: left;
+      margin-top: 0.8rem;
+    }
+    .m-sch-4-a{
+      width: 30%;
+      color: #333;
+      float: left;
+    }
+    .m-sch-4-b{
+      float: left;
+      overflow: hidden;
+      text-align: right;
+      padding-top: 10/@s;
+    }
+    .m-sch-4-c{
+      padding-top: 10/@s; 
+      float: right;
+    }
+}
+
+
+/* 添加优惠劵 */
+.m-layer-code {
+    position: fixed;
+    top: 30%;
+    left: 7%;
+    z-index: 103;
+    width: 85%;
+    background-color: #f3f3f3;
+    -webkit-border-radius: 0.7rem;
+    border-radius: 0.7rem;
+    .hd {
+        padding-top: 1rem;
+        .tt {
+          font-weight: normal;
+          font-size: 28/@s;
+          color: #333;
+          text-align: center;
+          padding-left: 30/@s;
+        }
+        .tt1 {
+          font-weight: normal;
+          font-size: 28/@s;
+          color: #333;
+          text-align: center;
+          padding-left: 30/@s;
+          padding-top: 30/@s;
+        }
+    }
+    .bd {
+        padding-bottom: 1rem;
+    } 
+    .u-ipt {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: box;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      border: 1px solid #dad6de;
+      -webkit-border-radius: 0.4rem;
+      border-radius: 0.4rem;
+      background-color: #fff;
+      padding: 0;
+      height: auto;
+      overflow: hidden;
+      margin: 1rem;
+      .ipt {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
+        -prefix-box-flex: 1;
+        box-flex: 1;
+        flex: 1;
+        padding: 0 1rem;
+        font-size: 22/@s;
+        height: 80/@s;
+        border: none;
+        background-color: transparent;
+      }
+    }
+    .ft {
+       border-top: 1px solid #dad6de;
+    }
+    .ops {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: box;
+    }
+    .u-btn {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: box;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -ms-box-flex: 1;
+      -prefix-box-flex: 1;
+      box-flex: 1;
+      flex: 1;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      width: 100%;
+      height: 3rem;
+      font-weight: normal;
+      font-size: 28/@s;
+      color: #007aff;
+      border-left: 1px solid #dad6de;
+    }
+    .u-btn:first-of-type {
+      border-left: none;
+    }
+    .m-addsuccess{
+      margin:50/@s 50/@s 30/@s 50/@s;
+    }
+    .u-btn-c2{   
+      color: #fff;
+    }
+}
+
+
+/* 手机号错误提示 */
+.new-phone{
+  padding: 80/@s 0;
+  text-align: center;
+  color: #e41b46;
+}
+
+
+/* 选择收货地址 */
+.m_new_shdz {
+  .on {
+    background: #f3f3f3;
+  }  
+  dl {
+    padding: 20/@s;
+    border-bottom: 1px solid #d0d0d0;
+    font-size: 26/@s;
+    overflow: hidden;
+    background: #fff;
+  } 
+  dt {
+    padding-bottom: 10/@s;
+  }
+  label {
+    float: left;
+    width: 90%;
+    line-height: 40/@s;
+  }
+}

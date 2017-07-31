@@ -1,0 +1,75 @@
+/* button */
+
+@import '../../common/_core.less';
+
+/* 订单确认 */
+.m-confirm {
+  color: #333;
+  padding-bottom: 70/@s;
+  font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  > .box {
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 20/@s;
+    padding-left: 25/@s;
+    padding-right: 25/@s;
+    border-bottom: 20/@s solid #f3f3f3;
+  }
+
+  .hd {
+    .tt1{
+    color: #333;
+    padding: 1.25rem 0;
+    font-size: 28/@s;
+    font-weight:normal;
+    width: 100%;
+    vertical-align: middle;
+   }
+   .more {
+    .flexbox;
+    
+    color: #666;
+
+    &:active {
+      color: #e41b46;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        margin-left: 16/@s;
+        width: 17/@s;
+        height: 26/@s;
+        background:url('@{static}/images/u-btn-arrow-right-gray.png') no-repeat center center;
+        background-size: contain;
+        margin-top: 0.3rem;
+      }
+    }
+    .flexbox;
+
+    .box-align(center);
+
+    .tt {
+      .flexbox;
+
+      .box-flex;
+
+      padding: 25/@s 0;
+      color: #333;
+      font-size: 28/@s;
+      font-weight: normal;
+    }
+  }
+
+  .bd {
+    padding-bottom: 30/@s;
+  }
+
+  > .ops {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: -20/@s;
+  }
+}

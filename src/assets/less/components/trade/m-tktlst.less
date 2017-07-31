@@ -1,0 +1,97 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+/* 票品列表 */
+.m-tktlst {
+
+  .box-orient(vertical);
+
+  .hd, .bd {
+    .flexbox;
+  }
+
+  .hd {
+    .flexbox;
+    
+    .box-align(center);
+
+    background-color: #f7f7f7;
+    height: 60/@s;
+    font-size: 24/@s;
+    color: #666;
+    border-bottom: 1px solid #d0d0d0;
+    
+    // 三角
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 100/@s;
+      top: -35/@s;
+      width: 0; 
+      height: 0; 
+      border-left: 36/@s solid transparent;
+      border-right: 36/@s solid transparent;
+      border-bottom: 36/@s solid #f7f7f7;
+    }
+  }
+
+  .bd {
+    .flexbox;
+
+    .box-flex;
+
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+
+    .box {
+      width: 100%;
+    }
+  }
+
+  .col {
+    .flexbox;
+
+    .box-align(center);
+
+    padding-right: 2.5%;
+
+    &-1 {
+      .box-pack(center);
+
+      width: 10%;
+      padding-left: 2.5%;
+    }
+
+    &-2 {
+      width: 27.5%;
+    }
+
+    &-3 {
+      width: 30%;
+    }
+
+    &-4 {
+      width: 20%;
+    }
+  }
+
+  .lst {
+    width: 100%;
+  }
+
+  .itm {
+    .flexbox;
+
+    padding: 20/@s 0;
+    font-size: 26/@s;
+    color: #333;
+    border-top: 1px solid #d0d0d0;
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+}

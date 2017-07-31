@@ -1,0 +1,162 @@
+/* footers */
+
+@import '../../common/_core.less';
+
+/* 配送方式 */
+.m-deliver {
+  // 选项卡
+  
+  .nav {
+    //.justify;
+
+    .f-cb;
+
+    padding-bottom: 30/@s;
+
+    .itm {
+      .flexbox;
+
+      .box-align(center);
+      .box-orient(vertical);
+      
+      float: left;
+      width: 25%;
+      color: #9a9a9a;
+      font-size: 24/@s;
+      line-height: 36/@s;
+
+      // 图标
+      .icon {
+        display: block;
+        width: 100/@s;
+        height: 100/@s;
+        margin-bottom: 12/@s;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        
+        // 二维码电子票
+        &-qrcode {
+
+          background:url('@{static}/images/icon-qrcode.png.png') no-repeat left 0;
+          background-size: contain;
+        }
+
+        // 身份证电子票
+        &-idcard {
+          background:url('@{static}/images/icon-idcard.png') no-repeat left 0;
+          background-size: contain;
+        }
+
+        // 快递
+        &-express {
+          background:url('@{static}/images/icon-express.png') no-repeat left 0;
+          background-size: contain;
+        }
+
+        // 上门自取
+        &-self {
+          background:url('@{static}/images/icon-self.png') no-repeat left 0;
+          background-size: contain;
+        }
+      }
+
+      &.z-sel {
+        .icon {
+          &-qrcode {
+            background:url('@{static}/images/icon-qrcode-on.png') no-repeat left 0;
+            background-size: contain;
+          }
+          
+          &-idcard {
+            background:url('@{static}/images/icon-idcard-on.png') no-repeat left 0;
+            background-size: contain;
+          }
+
+          &-express {
+            background:url('@{static}/images/icon-express-on.png') no-repeat left 0;
+            background-size: contain;
+          }
+
+          &-self {
+            background:url('@{static}/images/icon-self-on.png') no-repeat left 0;
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    .txt {
+      .flexbox;
+
+      .box-pack(center);
+
+      width: 100/@s;
+    }
+  }
+  
+  // 盒子
+  .box {
+    > .itm {
+      display: none;
+
+      &.z-show {
+        display: block;
+      }
+    }
+  }
+
+  .lab {
+    width: 3.2em;
+  }
+  
+  // 提示
+  .tips {
+    color: #aaa;
+    font-size: 24/@s;
+    line-height: 34/@s;
+    margin-top: 10/@s;
+    border-top: 1px solid #d0d0d0;
+    padding-top: 25/@s;
+  }
+
+  // 快递
+  .express {
+    position: relative;
+    color: #333;
+    font-size: 28/@s;
+    line-height: 32/@s;
+    border-top: 1px solid #d0d0d0;
+    padding-top: 25/@s;
+    padding-right: 40/@s;
+    margin-bottom: 20/@s;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 16/@s;
+      height: 16/@s;
+      border-style: solid;
+      border-color: #ccc;
+      border-width: 3px 3px 0 0;
+
+      .transform(rotate(45deg) translate3d(-16/@s, 0, 0));
+    }
+
+    .row {
+      .flexbox;
+
+      padding-bottom: 15/@s;
+    }
+
+    // 收货人
+    .name {
+      .flexbox;
+      
+      .box-flex;
+    }
+  }
+}

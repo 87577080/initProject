@@ -1,0 +1,99 @@
+@import "../../base/fn";
+
+.dmui-uploader{}
+.dmui-uploader__hd{
+    display: flex;
+    padding-bottom: @dmuiCellGapV;
+    align-items: center;
+}
+.dmui-uploader__title{
+    flex: 1;
+}
+.dmui-uploader__info{
+    color: @dmuiTextColorTips;
+}
+
+.dmui-uploader__bd{
+    margin-bottom: @dmuiCellGapH - (@dmuiCellGapV + @dmuiUploaderFileSpacing);
+    margin-right: -@dmuiUploaderFileSpacing;
+    overflow: hidden;
+}
+.dmui-uploader__files{
+    list-style: none;
+}
+.dmui-uploader__file{
+    float: left;
+    margin-right: @dmuiUploaderFileSpacing;
+    margin-bottom: @dmuiUploaderFileSpacing;
+    width: @dmuiUploaderSize;
+    height: @dmuiUploaderSize;
+    background: no-repeat center center;
+    background-size: cover;
+}
+.dmui-uploader__file_status{
+    position: relative;
+    &:before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+    }
+    .dmui-uploader__file-content{
+        display: block;
+    }
+}
+.dmui-uploader__file-content{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    .dmui-icon-warn{
+        display: inline-block;
+    }
+}
+.dmui-uploader__input-box{
+    float:left;
+    position: relative;
+    margin-right: @dmuiUploaderFileSpacing;
+    margin-bottom: @dmuiUploaderFileSpacing;
+    width: @dmuiUploaderSize - @dmuiUploaderBorderWidth * 2;
+    height: @dmuiUploaderSize - @dmuiUploaderBorderWidth * 2;
+    border: @dmuiUploaderBorderWidth solid @dmuiUploaderBorderColor;
+    &:before, &:after{
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: @dmuiUploaderBorderColor;
+    }
+    &:before{
+        width: @dmuiUploaderBorderWidth + 1;
+        height: @dmuiUploaderSize / 2;
+    }
+    &:after{
+        width: @dmuiUploaderSize / 2;
+        height: @dmuiUploaderBorderWidth + 1;
+    }
+    &:active{
+        border-color: @dmuiUploaderActiveBorderColor;
+        &:before, &:after{
+            background-color: @dmuiUploaderActiveBorderColor;
+        }
+    }
+}
+.dmui-uploader__input{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    .setTapColor();
+}

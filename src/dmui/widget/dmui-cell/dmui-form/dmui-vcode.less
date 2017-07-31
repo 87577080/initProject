@@ -1,0 +1,27 @@
+@import "../../../base/fn";
+
+.dmui-cell_vcode {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.dmui-vcode-img{
+    margin-left: 5px;
+    height: @dmuiCellHeight;
+    vertical-align: middle;
+}
+
+.dmui-vcode-btn {
+    display: inline-block;
+    height: @dmuiCellHeight;
+    margin-left: 5px;
+    padding: 0 0.6em 0 0.7em;
+    border-left: 1px solid @dmuiLineColorLight;
+    line-height: @dmuiCellHeight;
+    vertical-align: middle;
+    font-size: @dmuiCellFontSize;
+    color: @dmuiDialogLinkColor;
+    &:active {
+        color: desaturate(@dmuiDialogLinkColor, 30%);
+    }
+}
